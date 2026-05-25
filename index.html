@@ -1,87 +1,480 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="Starlink"/>
-    <meta name="keywords" content="SpaceX Starlink"/>
-    <meta name="description" content="High-speed internet. Available almost anywhere on Earth."/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Starlink"/>
-    <meta property="og:description" content="High-speed internet. Available almost anywhere on Earth."/>
-    <meta property="og:site_name" content="Starlink"/>
-    <meta property="og:image" content="https://starlink.com/assets/images/social/share.png"/>
-    <meta itemprop="name" content="Starlink"/>
-    <meta itemprop="image" content="https://starlink.com/assets/images/social/share.png"/>
-    <meta property="og:url" content="https://starlink.com"/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:description" content="High-speed internet. Available almost anywhere on Earth."/>
-    <meta name="twitter:title" content="Starlink"/>
-    <meta name="twitter:image" content="https://starlink.com/assets/images/social/share.png"/>
-    <meta charset="utf-8"/>
-    <title>Starlink</title>
-    <base href="/"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=1"/>
-    <meta name="google-site-verification" content="miqa7JdJIXZOKb-x86qWC6ohcjIfK5UKTlxk80lU_9Y"/>
-    <link rel="icon" type="image/x-icon" id="favicon" href="assets/favicons/favicon.ico"/>
-    <link rel="apple-touch-icon" id="favicon-apple" sizes="180x180" href="assets/favicons/apple-touch-icon.png"/>
-    <link rel="icon" id="favicon-32x32" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png"/>
-    <link rel="icon" id="favicon-16x16" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png"/>
-    <link rel="manifest" id="site-webmanifest" href="assets/favicons/site.webmanifest"/>
-    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.css"/>
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="no-script-app-root.css"
-      />
-    </noscript>
-  <link rel="stylesheet" href="styles.bbf17d10fcf2240214c8.css"></head>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audy Internet Connected</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-  <body class="marketing-client-container theme-dim">
-    <script type="application/ld+json" id="productStructuredData"></script>
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-PBFXQ9N"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe>
-    </noscript>
-    <link rel="preload" as="font" href="/assets/fonts/NeoDIN-Regular.woff2" type="font/woff2" crossorigin="anonymous"/>
-    <link rel="preload" as="font" href="/assets/fonts/NeoDIN-Bold.woff2" type="font/woff2" crossorigin="anonymous"/>
-    <app-root class="marketing-client">
-      <noscript>
-  <header>
-    <img src="assets/images/logo_black.png" />
-  </header>
-  <div>
-    <h3>JavaScript Not Enabled</h3>
-    <p>
-      JavaScript must be enabled on your browser, otherwise content or functionality of starlink.com may be
-      limited or unavailable.
-    </p>
+    body {
+      background: #080808;
+      color: #fff;
+    }
+
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.75)),
+        url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1600&q=80') center/cover;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 7%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 28px;
+      font-size: 14px;
+      font-weight: 600;
+      opacity: .9;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      border-bottom: 2px solid white;
+      padding-bottom: 4px;
+    }
+
+    .hero-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 0 7%;
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 78px);
+      line-height: 1;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+    }
+
+    .hero p {
+      font-size: 19px;
+      line-height: 1.6;
+      max-width: 640px;
+      color: #e5e5e5;
+      margin-bottom: 32px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 26px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 14px;
+      transition: .25s;
+    }
+
+    .btn-primary {
+      background: white;
+      color: black;
+    }
+
+    .btn-primary:hover {
+      background: #ddd;
+    }
+
+    .btn-outline {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: black;
+    }
+
+    section {
+      padding: 80px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #bbb;
+      max-width: 720px;
+      margin: 0 auto 45px;
+      line-height: 1.6;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #151515;
+      border: 1px solid #2a2a2a;
+      padding: 28px;
+      border-radius: 14px;
+      transition: .25s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #fff;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    .card p {
+      color: #cfcfcf;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .price {
+      font-size: 28px;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .features {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .features li {
+      color: #ddd;
+      margin-bottom: 10px;
+    }
+
+    .features li::before {
+      content: '✓ ';
+      font-weight: bold;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 50px;
+      align-items: center;
+    }
+
+    .split img {
+      width: 100%;
+      border-radius: 18px;
+    }
+
+    .split h2 {
+      font-size: 38px;
+      margin-bottom: 18px;
+    }
+
+    .split p {
+      color: #cfcfcf;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .faq-item {
+      max-width: 850px;
+      margin: 0 auto 16px;
+      background: #151515;
+      border: 1px solid #2a2a2a;
+      padding: 22px;
+      border-radius: 12px;
+    }
+
+    .faq-item h3 {
+      margin-bottom: 10px;
+    }
+
+    .faq-item p {
+      color: #cfcfcf;
+      line-height: 1.6;
+    }
+
+    .cta {
+      text-align: center;
+      background: linear-gradient(135deg, #111, #1f1f1f);
+    }
+
+    .cta h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #ccc;
+      margin-bottom: 28px;
+    }
+
+    footer {
+      padding: 30px 7%;
+      background: #050505;
+      color: #aaa;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      nav a {
+        margin: 0 8px;
+        font-size: 13px;
+      }
+
+      .hero-content {
+        text-align: center;
+        justify-content: center;
+      }
+
+      .btn-group {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero" id="home">
+    <header>
+      <div class="logo">STARLINK INDONESIA</div>
+      <nav>
+        <a href="#paket">Paket</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#coverage">Coverage</a>
+        <a href="#sewa">Sewa Outdoor</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </header>
+
+    <div class="hero-content">
+      <div>
+        <h1>Internet Cepat Untuk Semua Lokasi</h1>
+        <p>Solusi internet stabil untuk rumah, kantor, proyek, kapal, dan daerah terpencil. Cocok untuk wilayah yang sulit dijangkau jaringan kabel.</p>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="#paket">Lihat Paket</a>
+          <a class="btn btn-outline" href="https://wa.me/46762047392">Hubungi WhatsApp</a>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <section id="paket">
+    <h2 class="section-title">Paket Internet</h2>
+    <p class="section-subtitle">Pilih paket sesuai kebutuhan. Harga dan kapasitas dapat disesuaikan untuk lokasi rumah, kantor, bisnis, dan instansi.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Residensial</h3>
+        <div class="price">Mulai Rp 750rb</div>
+        <ul class="features">
+          <li>Cocok untuk rumah</li>
+          <li>Streaming dan meeting</li>
+          <li>Support pemasangan</li>
+        </ul>
+        <a class="btn btn-primary" href="https://wa.me/46762047392">Pesan Sekarang</a>
+      </div>
+      <div class="card">
+        <h3>Bisnis</h3>
+        <div class="price">Custom</div>
+        <ul class="features">
+          <li>Untuk kantor dan usaha</li>
+          <li>Prioritas stabilitas</li>
+          <li>Monitoring jaringan</li>
+        </ul>
+        <a class="btn btn-primary" href="https://wa.me/46762047392">Konsultasi</a>
+      </div>
+      <div class="card">
+        <h3>Proyek / Remote Area</h3>
+        <div class="price">Custom</div>
+        <ul class="features">
+          <li>Daerah terpencil</li>
+          <li>Instalasi lapangan</li>
+          <li>Support teknis</li>
+        </ul>
+        <a class="btn btn-primary" href="https://wa.me/46762047392">Minta Penawaran</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="layanan">
+    <div class="split">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" alt="Internet service" />
+      <div>
+        <h2>Layanan Lengkap dari Survey sampai Aktif</h2>
+        <p>Kami membantu kebutuhan internet mulai dari konsultasi lokasi, pemilihan perangkat, pemasangan, konfigurasi router, sampai monitoring koneksi.</p>
+        <p>Solusi dapat diterapkan untuk CCTV, WiFi publik, kantor, penginapan, sekolah, kapal, proyek tambang, dan area tanpa fiber optik.</p>
+        <a class="btn btn-outline" href="https://wa.me/46762047392">Konsultasi Gratis</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sewa">
+    <h2 class="section-title">Sewa Layanan Outdoor & Live Streaming</h2>
+    <p class="section-subtitle">Layanan internet portable dan stabil untuk kegiatan outdoor, konser, live streaming, event, camping, touring, webinar, dan siaran langsung dari lokasi terpencil.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Paket Harian</h3>
+        <div class="price">Mulai Rp 350rb</div>
+        <ul class="features">
+          <li>Cocok untuk event singkat</li>
+          <li>Internet portable</li>
+          <li>Support teknisi</li>
+        </ul>
+        <a class="btn btn-primary" href="https://wa.me/46762047392">Booking Sekarang</a>
+      </div>
+
+      <div class="card">
+        <h3>Live Streaming</h3>
+        <div class="price">Custom</div>
+        <ul class="features">
+          <li>Streaming YouTube & TikTok</li>
+          <li>Koneksi stabil outdoor</li>
+          <li>Monitoring jaringan realtime</li>
+        </ul>
+        <a class="btn btn-primary" href="https://wa.me/46762047392">Konsultasi</a>
+      </div>
+
+      <div class="card">
+        <h3>Sewa Mingguan</h3>
+        <div class="price">Promo</div>
+        <ul class="features">
+          <li>Untuk proyek lapangan</li>
+          <li>Support instalasi</li>
+          <li>Cocok area terpencil</li>
+        </ul>
+        <a class="btn btn-primary" href="https://wa.me/46762047392">Minta Penawaran</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="coverage">
+    <h2 class="section-title">Melayani Seluruh Indonesia Cover Area</h2>
+    <p class="section-subtitle">Layanan tersedia untuk seluruh wilayah Indonesia mulai dari kota besar, pulau terpencil, pegunungan, area proyek, hingga lokasi outdoor dan live streaming selama tersedia area langit terbuka dan sumber listrik yang stabil.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Rumah & Perumahan</h3>
+        <p>Internet harian untuk keluarga, hiburan, belajar online, dan kerja dari rumah.</p>
+      </div>
+      <div class="card">
+        <h3>Kantor & Instansi</h3>
+        <p>Mendukung operasional kantor, aplikasi, CCTV, dan komunikasi digital.</p>
+      </div>
+      <div class="card">
+        <h3>Remote Area</h3>
+        <p>Cocok untuk lokasi proyek, pulau, kebun, kapal, dan wilayah tanpa jaringan kabel.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="internet-cepat">
+    <div class="split">
+      <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80" alt="Internet satelit" />
+      <div>
+        <h2>INTERNET BERKECEPATAN TINGGI SETERPENCIL APA PUN</h2>
+        <p>Lakukan aktivitas yang sebelumnya tidak mungkin dilakukan dengan internet satelit.</p>
+        <p>Tersedia melalui konstelasi satelit canggih yang beroperasi di orbit rendah yang mengelilingi Bumi untuk menghadirkan koneksi cepat dan stabil hingga ke wilayah terpencil.</p>
+        <a class="btn btn-outline" href="https://wa.me/46762047392">Cek Area Anda</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="kebutuhan">
+    <div class="split">
+      <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80" alt="Internet cepat" />
+      <div>
+        <h2>Internet yang dirancang untuk setiap kebutuhan</h2>
+        <p>Internet berkecepatan tinggi untuk kebutuhan rumah, bisnis, kantor, live streaming, gaming, dan pekerjaan profesional.</p>
+        <p>Hingga 400+ Mbps di banyak wilayah sehingga Anda bebas menikmati streaming 4K di beberapa perangkat sekaligus, bekerja dari rumah, bermain game online, menjelajahi media sosial, meeting video, dan banyak lagi.</p>
+        <p>Periksa kecepatan dan ketersediaan layanan di wilayah Anda sekarang.</p>
+        <a class="btn btn-outline" href="https://wa.me/46762047392">Periksa Area</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="unlimited">
+    <div class="split">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="Kuota tanpa batas" />
+      <div>
+        <h2>Kuota Tanpa Batas Tersedia</h2>
+        <p>Paket layanan Residensial menghadirkan opsi data berkecepatan tinggi tanpa batas untuk kebutuhan internet rumah, kantor, dan aktivitas digital harian.</p>
+        <p>Nikmati koneksi stabil untuk streaming, meeting online, gaming, CCTV, live streaming, dan penggunaan multi perangkat tanpa khawatir batas kuota harian.</p>
+        <a class="btn btn-outline" href="https://wa.me/46762047392">Lihat Paket Residensial</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="keunggulan">
+    <div class="split">
+      <img src="https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?auto=format&fit=crop&w=1200&q=80" alt="Starlink outdoor" />
+      <div>
+        <h2>Andal & Tangguh</h2>
+        <p>Internet berkecepatan tinggi dengan konektivitas yang andal di seluruh Indonesia dan berbagai kondisi medan.</p>
+        <p>Dirancang untuk berfungsi optimal dalam kondisi ekstrem. Sistem dapat bekerja dalam hujan lebat, angin kencang, dan berbagai kondisi cuaca outdoor untuk mendukung konektivitas tetap stabil.</p>
+        <a class="btn btn-outline" href="https://wa.me/46762047392">Hubungi Kami</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2 class="section-title">Pertanyaan Umum</h2>
+    <div class="faq-item">
+      <h3>Apakah bisa dipasang di daerah terpencil?</h3>
+      <p>Bisa, selama lokasi memiliki area terbuka untuk perangkat dan tidak terhalang bangunan tinggi atau pepohonan.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Apakah bisa untuk CCTV?</h3>
+      <p>Bisa. Kami dapat bantu konfigurasi router dan jalur trafik agar CCTV lebih stabil sesuai kebutuhan jaringan.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Apakah ada bantuan pemasangan?</h3>
+      <p>Ada. Tim dapat membantu instalasi, setting router, WiFi, dan pengecekan kualitas koneksi.</p>
+    </div>
+  </section>
+
+  <section class="cta" id="kontak">
+    <h2>Butuh Internet Stabil?</h2>
+    <p>Hubungi kami untuk konsultasi paket, pemasangan, dan penawaran harga.</p>
+    <a class="btn btn-primary" href="https://wa.me/46762047392">WhatsApp: +46 762 047 392</a>
+  </section>
+
   <footer>
-    <div>Starlink &copy; 2024</div>
-    <div>
-      Starlink is a division of SpaceX. Visit us at
-      <a
-        href="https://www.spacex.com/"
-        target="_blank"
-        >spacex.com</a
-      >
-    </div>
-    <div>
-      <a href="/legal">Privacy Policy</a>
-    </div>
+    © 2026 Audy Internet Connected. All rights reserved.
   </footer>
-</noscript>
-
-    </app-root>
-    <script src="environment.js"></script>
-    <script type="text/javascript" src="/global-environment.js"></script>
-    <script type="text/javascript" src="/api/client-region"></script>
-    <script type="text/javascript" src="assets/global/js/browser-detection.js"></script>
-    <script type="text/javascript" src="assets/landing/swiper/swiper.min.js"></script>
-  <script src="runtime.c69b8da854446aef826e.js" defer></script><script src="polyfills.ce5cc316eb98bfd9e77d.js" defer></script><script src="vendor.48b89bd16c9aabf0743b.js" defer></script><script src="main.e085820a438cbd3f64e7.js" defer></script></body>
+</body>
 </html>
-
